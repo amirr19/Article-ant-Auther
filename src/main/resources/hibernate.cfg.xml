@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hibernate-configuration >
+    <session-factory>
+        <property name="show_sql">true</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1374Amir1374</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/ArticleWithAuthor?createDatabaseIfNotExist=true
+        </property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="ir.maktab.java32.homework8.article.domain.Article"/>
+        <mapping class="ir.maktab.java32.homework8.article.domain.Category" />
+        <mapping class="ir.maktab.java32.homework8.article.domain.Author" />
+    </session-factory>
+</hibernate-configuration>

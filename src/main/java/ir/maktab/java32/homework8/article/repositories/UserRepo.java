@@ -1,9 +1,9 @@
 package ir.maktab.java32.homework8.article.repositories;
 
 import ir.maktab.java32.homework8.article.config.hibernate.repositories.DatabaseRepo;
-import ir.maktab.java32.homework8.article.domain.User;
+import ir.maktab.java32.homework8.article.domain.Author;
 
-public class UserRepo extends DatabaseRepo<User,Long> {
+public class UserRepo extends DatabaseRepo<Author,Long> {
     private static UserRepo ourInstance = new UserRepo();
 
     public static UserRepo getInstance() {
@@ -14,7 +14,7 @@ public class UserRepo extends DatabaseRepo<User,Long> {
     }
 
     @Override
-    protected Class<User> getEntityClass() {
-        return User.class;
+    protected Class<Author> getEntityClass() {
+        return Author.class;
     }
 }

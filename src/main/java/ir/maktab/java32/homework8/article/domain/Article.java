@@ -24,4 +24,24 @@ private Date createDate;
 private Date lastUpdateDate;
 private Date publishedDate;
 private boolean isPublished;
+
+    public Author getUsers() {
+        return authors;
+    }
+
+
+    public void setUsers(Author users) {
+        this.authors = users;
+    }
+
+    @ManyToOne(optional = false)
+    private Author authors;
+
+    public Author getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(Author authors) {
+        this.authors = authors;
+    }
 }
