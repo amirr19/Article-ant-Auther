@@ -1,10 +1,10 @@
 import ir.maktab.java32.homework8.article.domain.Author;
-import ir.maktab.java32.homework8.article.repositories.UserRepo;
+import ir.maktab.java32.homework8.article.repositories.AuthorRepo;
 
 import java.util.Scanner;
 
 public class MainApp {
-    private static UserRepo authorRepo = UserRepo.getInstance();
+    private static AuthorRepo authorRepo = AuthorRepo.getInstance();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,9 +21,11 @@ public class MainApp {
             //login
             if (cmd == 1) {
                 System.out.println("please insert your user name:");
-                String userName = scanner.nextLine();
+                String authorName = scanner.nextLine();
                 System.out.println("please insert your password:");
                 long password = scanner.nextLong();
+
+
             }
             // sign in
             if (cmd == 2) {
@@ -42,7 +44,7 @@ public class MainApp {
                                 birthday
                         )
                 );
-                System.out.println("WELCOME "+user.getUsername()+" !");
+                System.out.println(user.getUsername()+", ADDED");
             }
             if (cmd == 3) {
                 System.out.println("Here is the title of articles.");

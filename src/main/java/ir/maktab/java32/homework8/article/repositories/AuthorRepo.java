@@ -3,14 +3,14 @@ package ir.maktab.java32.homework8.article.repositories;
 import ir.maktab.java32.homework8.article.config.hibernate.repositories.DatabaseRepo;
 import ir.maktab.java32.homework8.article.domain.Author;
 
-public class UserRepo extends DatabaseRepo<Author,Long> {
-    private static UserRepo ourInstance = new UserRepo();
+public class AuthorRepo extends DatabaseRepo<Author,Long> {
+    private static AuthorRepo authorInstance = new AuthorRepo();
 
-    public static UserRepo getInstance() {
-        return ourInstance;
+    public static AuthorRepo getInstance() {
+        return authorInstance;
     }
 
-    private UserRepo() {
+    private AuthorRepo() {
     }
 
     @Override
