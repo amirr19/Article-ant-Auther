@@ -1,3 +1,5 @@
+import ir.maktab.java32.homework8.article.config.hibernate.repositories.LoginUsecae;
+import ir.maktab.java32.homework8.article.config.hibernate.repositories.LoginUsecaseImlp;
 import ir.maktab.java32.homework8.article.domain.Author;
 import ir.maktab.java32.homework8.article.repositories.AuthorRepo;
 
@@ -21,10 +23,15 @@ public class MainApp {
             //login
             if (cmd == 1) {
                 System.out.println("please insert your user name:");
+                String nothing = scanner.nextLine();
                 String authorName = scanner.nextLine();
                 System.out.println("please insert your password:");
-                long password = scanner.nextLong();
-
+                String password = scanner.nextLine();
+                LoginUsecae loginUsecae = new LoginUsecaseImlp();
+                Author author = loginUsecae.login(authorName, password);
+                if (author != null) {
+                    System.out.println(" Login successful by " + author.getUsername());
+                }
 
             }
             // sign in
@@ -44,7 +51,7 @@ public class MainApp {
                                 birthday
                         )
                 );
-                System.out.println(user.getUsername()+", ADDED");
+                System.out.println(user.getUsername() + ", ADDED");
             }
             if (cmd == 3) {
                 System.out.println("Here is the title of articles.");

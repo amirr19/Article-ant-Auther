@@ -3,8 +3,6 @@ package ir.maktab.java32.homework8.article.domain;
 
 import lombok.Data;
 import lombok.ToString;
-import net.bytebuddy.build.Plugin;
-import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -32,4 +30,5 @@ public class Author {
         this.password = String.valueOf(nationalCode);
         this.birthday = dob;
     }
+    public Author(){}
 }
