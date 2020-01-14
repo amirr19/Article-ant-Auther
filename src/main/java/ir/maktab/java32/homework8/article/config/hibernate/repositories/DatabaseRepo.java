@@ -16,6 +16,8 @@ public abstract class DatabaseRepo<Entity, ID extends Serializable> {
         return entity;
     }
 
+
+
     private Session getSession() {
         return HibernateUtil.getSession();
     }
